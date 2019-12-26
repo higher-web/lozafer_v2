@@ -968,7 +968,8 @@ li.sale-noti > a {
   align-items: center;
   justify-content: space-between;
   min-height: 80px;
-  padding-left: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: white;
@@ -1042,7 +1043,6 @@ li.sale-noti > a {
   width: 100%;
   background-color: white;
   display: none;
-  border-top: 1px solid #ececec;
 }
 
 .side-menu {
@@ -1056,7 +1056,7 @@ li.sale-noti > a {
 .side-menu .main-menu {margin-bottom: 0;}
 
 .item-menu-mobile {
-  background-color: #e65540;
+  background-color: #232323f3;
 }
 
 .side-menu .main-menu > li > a {
