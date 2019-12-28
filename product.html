@@ -341,14 +341,18 @@
 							<!-- Block2 -->
 							<div class="block2">
 								<div class="block2-img wrap-pic-w of-hidden pos-relative ">
-									<img src="images/item-02.jpg" alt="IMG-PRODUCT">
+									<img id="producto_test" src="images/item-02.jpg" alt="IMG-PRODUCT">
 
 									<div class="block2-overlay trans-0-4">
 
 
 										<div class="block2-btn-addcart w-size1 trans-0-4">
 											<!-- Button -->
-											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4"
+												data-toggle="modal" data-target="#exampleModal"
+												data-whatever="CUADRADA S/ENLOZAR" data-img="images/item-02.jpg" data-detalle="Cod: 701 - 2 24x24 cm
+												Cod: 702 - 3 27x27 cm
+												Cod: 703 - 4 29.5x29.5 cm">
 												VER DETALLE
 											</button>
 										</div>
@@ -712,6 +716,29 @@
 	</section>
 
 
+
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel"></h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<img id="modal-img" src="" alt="IMG-PRODUCT">
+					<p id="modal-detalle"></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 	<!-- Footer -->
 	<!-- <footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
 		<div class="flex-w p-b-90">
@@ -981,19 +1008,17 @@
 	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/sweetalert/sweetalert.min.js"></script>
 	<script type="text/javascript">
-		$('.block2-btn-addcart').each(function () {
-			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-			$(this).on('click', function () {
-				swal(nameProduct, "is added to cart !", "success");
-			});
-		});
-
-		$('.block2-btn-addwishlist').each(function () {
-			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-			$(this).on('click', function () {
-				swal(nameProduct, "is added to wishlist !", "success");
-			});
-		});
+		$('#exampleModal').on('show.bs.modal', function (event) {
+			var button = $(event.relatedTarget) // Button that triggered the modal
+			var recipient = button.data('whatever')
+			var img = button.data('img')
+			var detalle = button.data('detalle')
+			var modal = $(this)
+			modal.find('#modal-img').attr("src", img);
+			modal.find('.modal-title').text(recipient);
+			modal.find('.modal-body input').val(recipient);
+			modal.find('#modal-detalle').text(detalle);
+		})
 	</script>
 
 	<!--===============================================================================================-->
