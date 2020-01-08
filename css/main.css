@@ -101,7 +101,7 @@ a {
   font-weight: 400;
 	font-size: 15px;
 	line-height: 1.7;
-	color: #666666;
+	color: rgba(255, 255, 255, 0.733);
 	margin: 0px;
 	transition: all 0.4s;
 	-webkit-transition: all 0.4s;
@@ -1106,7 +1106,6 @@ li.sale-noti > a {
 
 .side-menu .sub-menu > li {
   padding-left: 12px;
-  padding-top: 
 }
 
 .side-menu .sub-menu a:hover {
