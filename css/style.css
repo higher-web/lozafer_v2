@@ -1,4 +1,50 @@
-.font-pepe {
-    font-size: 50px !important;
+.w-srch {
+    width: 100% !important;
 }
 
+.bck-header {
+    background-color: #232323 !important;
+}
+
+.alt-logo {
+    max-height: 45px !important;
+}
+
+.clrcontact{
+background-color: #e65540 !important;
+}
+
+.prom-1 {
+color: #232323d5 !important; 
+max-width: 100% !important;
+}
+
+.prom-2 {
+    font-size: none !important; 
+    font-size: 20px;
+}
+
+.blckltr {
+    color: #232323d5 !important;
+}
+
+.spcltr {
+    letter-spacing: 3px !important
+}
+
+.bck-footer {
+    background-color:#232323f3 !important;
+}
+
+.ltr-footer {
+    color:#FF5C1A !important;
+}
+
+.w-itm {
+    width: 60px !important;
+}
+
+.ftr-hig{
+    background-color: #232323; 
+    color: #666666
+}
